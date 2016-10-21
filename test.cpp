@@ -17,27 +17,9 @@ void NextArrangementTest(const vector<vector<CourseInfo>> &courseHasBeenSorted);
 void DeleteCourseYouNotHaveTest(vector<vector<CourseInfo>> &courseHasBeenSorted);
 
 int test(){
-	vector<CourseInfo> aallCourse;
-	string path;
-	for(int i=1;i<6;i++){
-		path="C:\\Users\\WangZiLei\\Desktop\\选课工具\\resource\\AllCourseInfo\\";
-		char path_tmp=i+'0'-0;
-
-		path+=path_tmp;
-		path+=".txt";
-		cout<<path<<endl;
-		ReadFromFile(aallCourse,path);
-	}
-	//ReadFromFile(aallCourse,path);
-	PrintOneDenmensionVector(aallCourse);
-
-	return 0;
-
 	vector<CourseInfo> CourseInfoTmp,allCourse;
-	ReadFromFile(CourseInfoTmp,"C:\\Users\\WangZiLei\\Desktop\\选课工具\\resource\\courseWeHave.txt");
-	ReadFromFile(allCourse,"C:\\Users\\WangZiLei\\Desktop\\选课工具\\resource\\courseWeChooseFrom.txt");
-
-	PrintOneDenmensionVector(CourseInfoTmp);
+	ReadFromFile(CourseInfoTmp,"C:\\Users\\WangZiLei\\Desktop\\选课工具\\resource\\courseWeHave");
+	ReadFromFile(allCourse,"C:\\Users\\WangZiLei\\Desktop\\选课工具\\resource\\courseWeChooseFrom");
 
 	vector<vector<CourseInfo>> courseHasBeenSorted,result,courseHasBeenDelete;
 	SummarizeCourse(courseHasBeenSorted,allCourse);
@@ -54,6 +36,7 @@ int test(){
 
 	//ReadFromFileTest();
 	return 0;
+
 }
 
 void SummarizeCourseTest(const vector<CourseInfo> &allCourse){

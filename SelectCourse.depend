@@ -15,7 +15,7 @@
 	<string>
 	"SelectCourse.h"
 
-1474469392 c:\users\wangzilei\desktop\选课工具\selectcourse.h
+1477031477 c:\users\wangzilei\desktop\选课工具\selectcourse.h
 	<iostream>
 	<vector>
 
@@ -23,13 +23,13 @@
 	<iostream>
 	<fstream>
 
-1474469392 source:c:\users\wangzilei\desktop\选课工具\function.cpp
+1477030802 source:c:\users\wangzilei\desktop\选课工具\function.cpp
 	<iostream>
 	<fstream>
 	<vector>
 	"SelectCourse.h"
 
-1476699734 source:c:\users\wangzilei\desktop\选课工具\test.cpp
+1477030745 source:c:\users\wangzilei\desktop\选课工具\test.cpp
 	<iostream>
 	<fstream>
 	<vector>

@@ -41,7 +41,19 @@ public:
 };
 
 //读取文件,读入到指定变量，此函数一般测试的时候使用
-int ReadFromFile(std::vector<CourseInfo> &vCourseInfo,std::string filePath);
+//filePath只写文件名，不写拓展名
+//由于c++中不能读取大文件，因此大文件都用python分解成小文件
+//然后让c++分次读取这些小文件
+//numberOfFiles参数默认为1
+//如果numberOfFiles==1，则读入单个文件
+//!注意:文件名都是从1开始编号的
+//!读入文件统一不带拓展名
+//filePath 是文件名前缀，例如 C:\\选课工具\\resource\\AllCourseInfo\\course"
+//如果numberOfFiles=2，则会读取course1.txt 和 course2.txt
+int ReadFromFile(std::vector<CourseInfo> &vCourseInfo,std::string filePath,int numberOfFiles=1);
+
+//读入单个文件，将文件内容输入到指定变量
+int ReadSingleFile(std::vector<CourseInfo> &vCourseInfo,std::string filePath);
 
 //返回指定字符在字符串中出现的次数
 int GetCharShowTime(std::string str,char c);

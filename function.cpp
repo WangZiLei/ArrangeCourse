@@ -3,32 +3,29 @@
 #include <vector>
 #include "SelectCourse.h"
 
-int ReadFromFile(std::vector<CourseInfo> &vCourseInfo,std::string filePath){
+
+int ReadSingleFile(std::vector<CourseInfo> &vCourseInfo,std::string filePath){
 	std::ifstream in; //读入文件
 	in.open(filePath);
+	//std::cout<<filePath<<std::endl;
 	if(!in){
 		std::cout<<"读入文件失败"<<std::endl;
 		return 1;
 	}
-
 	CourseInfo tmp_CourseInfo;
-
 	std::string courseName; //课程名称
 	std::string teacherName; //老师名字
 	std::string SurplusStuNum;//课堂剩余人数
 	std::string credit; //学分
 	std::string CourseTime; //上课时间 如：10304，即周一的第三四节课
 	std::string CourseWeek; //上课周次
-
-    while(!in.fail()){
-
+	while(!in.fail()){
 		in>>courseName; //课程名称
 		in>>credit; //学分
 		in>>SurplusStuNum;//课堂剩余人数
 		in>>teacherName; //老师名字
 		in>>CourseWeek; //上课周次
 		in>>CourseTime; //上课时间 如：10304，即周一的第三四节课
-
 		//如果课程剩余人数小于-10，则不读取该课程信息
 		if(SurplusStuNum<="-10")
 			continue;
@@ -43,7 +40,26 @@ int ReadFromFile(std::vector<CourseInfo> &vCourseInfo,std::string filePath){
 			CourseWeek="";
 			CourseTime="";
 		}
-    }
+	}
+	in.close();
+	return 0;
+}
+
+int ReadFromFile(std::vector<CourseInfo> &vCourseInfo,std::string filePath,int numberOfFiles){
+	//文件名
+	std::string fileName;
+	if(numberOfFiles==1){
+		filePath+=".txt";
+		ReadSingleFile(vCourseInfo,filePath);
+	}else{
+		for(int i=0;i<numberOfFiles;i++){
+			//文件名都是从1开始编号的
+			fileName=i+1+'0'-0;
+			fileName+=".txt";
+			ReadSingleFile(vCourseInfo,filePath+fileName);
+			fileName="";
+		}
+	}
 	return 0;
 }
 
