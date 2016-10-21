@@ -1,0 +1,65 @@
+# depslib dependency file v1.0
+1474469392 source:c:\users\wangzilei\desktop\选课工具\selectcourse.cpp
+	<iostream>
+	<fstream>
+	<vector>
+	"SelectCourse.h"
+
+1472548554 source:c:\users\wangzilei\desktop\选课工具\test\readfile.cpp
+	<iostream>
+	<fstream>
+
+1474469392 source:c:\users\wangzilei\desktop\选课工具\main.cpp
+	<iostream>
+	<vector>
+	<string>
+	"SelectCourse.h"
+
+1474469392 c:\users\wangzilei\desktop\选课工具\selectcourse.h
+	<iostream>
+	<vector>
+
+1472548710 c:\users\wangzilei\desktop\选课工具\test\readfile.cpp
+	<iostream>
+	<fstream>
+
+1474469392 source:c:\users\wangzilei\desktop\选课工具\function.cpp
+	<iostream>
+	<fstream>
+	<vector>
+	"SelectCourse.h"
+
+1476699734 source:c:\users\wangzilei\desktop\选课工具\test.cpp
+	<iostream>
+	<fstream>
+	<vector>
+	"SelectCourse.h"
+
+1474469392 source:c:\users\wangzilei\desktop\选课工具\c++\function.cpp
+	<iostream>
+	<fstream>
+	<vector>
+	"SelectCourse.h"
+
+1474469392 c:\users\wangzilei\desktop\选课工具\c++\selectcourse.h
+	<iostream>
+	<vector>
+
+1474469392 source:c:\users\wangzilei\desktop\选课工具\c++\main.cpp
+	<iostream>
+	<vector>
+	<string>
+	"SelectCourse.h"
+
+1474469392 source:c:\users\wangzilei\desktop\选课工具\c++\selectcourse.cpp
+	<iostream>
+	<fstream>
+	<vector>
+	"SelectCourse.h"
+
+1476946671 source:c:\users\wangzilei\desktop\选课工具\c++\test.cpp
+	<iostream>
+	<fstream>
+	<vector>
+	"SelectCourse.h"
+
